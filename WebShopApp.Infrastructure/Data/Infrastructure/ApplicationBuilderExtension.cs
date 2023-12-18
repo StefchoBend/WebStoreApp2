@@ -26,7 +26,7 @@ namespace WebShopApp.Infrastructure.Data.Infrastructure
             SeedCategories(dataCategory);
 
             var dataBrand = serviceScope.ServiceProvider.GetRequiredService<ApplicationDbContext>();
-            SeedCategories(dataBrand);
+            SeedBrands(dataBrand);
 
             return app;
         }
