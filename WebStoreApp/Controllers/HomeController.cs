@@ -2,6 +2,8 @@
 
 using Microsoft.AspNetCore.Mvc;
 
+using WebShopApp.Core.Contracts;
+
 using WebStoreApp.Models;
 
 namespace WebStoreApp.Controllers
@@ -9,7 +11,7 @@ namespace WebStoreApp.Controllers
     public class HomeController : Controller
     {
         private readonly ILogger<HomeController> _logger;
-
+       
         public HomeController(ILogger<HomeController> logger)
         {
             _logger = logger;
