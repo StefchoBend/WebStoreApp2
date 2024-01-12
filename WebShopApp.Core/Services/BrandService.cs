@@ -35,5 +35,15 @@ namespace WebShopApp.Core.Services
             return _context.Products
                 .Where(x=> x.BrandId == brandId).ToList();
         }
+
+        public bool Create(string brandName)
+        {
+            Brand item = new Brand
+            {
+                BrandName = brandName,
+            };
+            _context.Brands.Add(item);
+            return _context.SaveChanges() != 0;  
+        }
     }
 }

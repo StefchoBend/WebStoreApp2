@@ -1,0 +1,18 @@
+﻿@model WebStoreApp.Models.Brand.BrandCreateVM
+
+<h2>Create Brand</h2>
+
+<form asp-action="Create" method="post">
+    <div class="form-group">
+        <label asp-for="BrandName"></label>
+        <input asp-for="BrandName" class="form-control" />
+        <span asp-validation-for="BrandName" class="text-danger"></span>
+    </div>
+
+    <button type="submit" class="btn btn-primary">Create</button>
+</form>
+@section Scripts {
+    @{
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+    }
+}

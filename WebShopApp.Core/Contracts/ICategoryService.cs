@@ -13,5 +13,6 @@ namespace WebShopApp.Core.Contracts
         List<Category> GetCategories();
         Category GetCategoryById(int categoryId);
         List<Product> GetProductsByCategory(int categoryId);
+        
     }
 }
